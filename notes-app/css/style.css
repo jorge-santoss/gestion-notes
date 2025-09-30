@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 40px;
+  background: #fff; /* plain page */
+}
+
+.notebook {
+  background: url('../assets/images/blocknotes.jpg') no-repeat top center;
+  background-size: contain;
+  width: 600px;       /* set to match your notebook image width */
+  min-height: 700px;  /* enough for form */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0 30px; /* pushes form inside the notebook page */
+  box-sizing: border-box;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 30px 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.left-panel {
+display: flex;
+flex-direction: column;
+justify-content: center;
+  background: transparent;
+  padding: 20px;
+}
+
+.right-panel {
+  flex: 1;
+  /* max-width: 400px; */
+  overflow-y: auto;
+} 
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  margin-left: 128px;
+  width: 60%; /* Ensure form takes full width of its container */
+}
+
+/* Make title input transparent */
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+/* Make textarea transparent */
+textarea {
+  min-height: 200px;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.4;
+  resize: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  width: 100%; /* Ensure it takes full width */
+  overflow-y: auto; /* Re-enable vertical scrolling */
+}
+
+/* Make SimpleMDE editor transparent */
+/* .CodeMirror {
+  height: 200px !important;
+  max-height: 200px !important;
+  overflow-y: auto !important;
+  background: transparent;
+} */
+button {
+  background-color: #31843c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #24562b;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  /* width: auto; */
+  margin: 0 auto;
+}
+
+.search-input-group {
+  display: flex;
+  flex: 1;
+  min-width: 400px;
+}
+
+.search-input {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  background: white;
+  margin: 0 !important;
+}
+.search-form input[type="text"] {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  min-width: 250px;
+  background: white;
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  white-space: nowrap;
+}
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.notes {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.note-content {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  overflow-wrap: break-word; /* Break long words */
+  word-wrap: break-word; /* For older browsers */
+  overflow: hidden; /* Prevent content from overflowing */
+  max-width: 100%; /* Ensure it doesn't exceed container width */
+  word-break: break-word; /* Break words if needed */
+}
+
+
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 2px solid #eee;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  max-width: 100%; /* Add this */
+  overflow: hidden; /* Add this */
+}
+
+li strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+li p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+li small {
+  color: #777;
+  display: block;
+  margin-bottom: 15px;
+}
+
+li a {
+  color: #e74c3c;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: auto;
+}
+
+footer p {
+  color: #555;
+}
+
+/* .note-content {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+} */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .left-panel, .right-panel {
+    width: 100%;
+  }
+}
+
