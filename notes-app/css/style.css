@@ -12,18 +12,18 @@ body {
   justify-content: center;
 
   padding: 40px;
-  background: #fff; /* plain page */
+  background: #fff; 
 }
 
 .notebook {
   background: url('../assets/images/blocknotes.jpg') no-repeat top center;
   background-size: contain;
-  width: 600px;       /* set to match your notebook image width */
-  min-height: 700px;  /* enough for form */
+  width: 600px;       
+  min-height: 700px;  
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px 0 30px; /* pushes form inside the notebook page */
+  padding: 40px 0 30px; 
   box-sizing: border-box;
 }
 
@@ -80,10 +80,10 @@ form {
   justify-content: center;
   gap: 15px;
   margin-left: 128px;
-  width: 60%; /* Ensure form takes full width of its container */
+  width: 60%; 
 }
 
-/* Make title input transparent */
+
 input[type="text"] {
   padding: 10px;
   border: 1px solid #ddd;
@@ -92,7 +92,7 @@ input[type="text"] {
   background-color: transparent;
 }
 
-/* Make textarea transparent */
+
 textarea {
   min-height: 200px;
   height: 200px;
@@ -105,17 +105,11 @@ textarea {
   resize: none;
   background-color: transparent;
   box-sizing: border-box;
-  width: 100%; /* Ensure it takes full width */
-  overflow-y: auto; /* Re-enable vertical scrolling */
+  width: 100%; 
+  overflow-y: auto; 
 }
 
-/* Make SimpleMDE editor transparent */
-/* .CodeMirror {
-  height: 200px !important;
-  max-height: 200px !important;
-  overflow-y: auto !important;
-  background: transparent;
-} */
+
 button {
   background-color: #31843c;
   color: white;
@@ -160,6 +154,7 @@ button:hover {
   background: white;
   margin: 0 !important;
 }
+
 .search-form input[type="text"] {
   padding: 10px 15px;
   border: 1px solid #ddd;
@@ -192,13 +187,12 @@ button:hover {
   padding: 10px;
   border-radius: 4px;
   border: 1px solid #eee;
-  overflow-wrap: break-word; /* Break long words */
-  word-wrap: break-word; /* For older browsers */
-  overflow: hidden; /* Prevent content from overflowing */
-  max-width: 100%; /* Ensure it doesn't exceed container width */
-  word-break: break-word; /* Break words if needed */
+  overflow-wrap: break-word; 
+  word-wrap: break-word; 
+  overflow: hidden; 
+  max-width: 100%; 
+  word-break: break-word; 
 }
-
 
 
 ul {
@@ -212,8 +206,8 @@ li {
   border: 2px solid #eee;
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  max-width: 100%; /* Add this */
-  overflow: hidden; /* Add this */
+  max-width: 100%; 
+  overflow: hidden; 
 }
 
 li strong {
@@ -255,12 +249,6 @@ footer p {
   color: #555;
 }
 
-/* .note-content {
-  background-color: #f9f9f9;
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #eee;
-} */
 
 @media (max-width: 768px) {
   .container {
@@ -271,4 +259,3 @@ footer p {
     width: 100%;
   }
 }
-
