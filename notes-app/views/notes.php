@@ -1,8 +1,12 @@
+<!-- <h2>Mes notes</h2> -->
+ <span class="add-btn">
+<a href="index.php?route=notes.create">Ajouter une note</a>
+</span>
 <div class="search-section">
   <div class="search-wrapper">
     <form method="get" action="index.php" class="search-form">
       <div class="search-input-group">
-        <input type="text" name="search" placeholder="Rechercher" class="search-input">
+        <input type="text" name="search" placeholder="Rechercher..." class="search-input">
       </div>
       <div class="radio-group">
         <label><input type="radio" name="field" value="title" checked> Titre</label>
@@ -14,6 +18,9 @@
 </div>
 
 <div class="right-panel">
+  
+  <h1>Mes Notes</h1>
+  
   <ul>
     <?php foreach ($notes as $note): ?>
       <li>
@@ -27,7 +34,7 @@
           </script>
         </div>
         <small><?= $note['created_at'] ?></small>
-        <a href="index.php?delete=<?= $note['id'] ?>">❌ Supprimer</a>
+        <a href="index.php?route=notes.delete&id=<?= $note['id'] ?>">❌ Supprimer</a>
       </li>
     <?php endforeach; ?>
   </ul>

@@ -1,6 +1,8 @@
+    <h2>Ajouter une note</h2>
+    
     <div class="left-panel">
       <div class="notebook">
-        <form method="POST" action="index.php">
+        <form method="POST" action="index.php?route=notes.store">
           <input type="text" name="title" placeholder="Titre" required>
           <!-- <textarea name="content" placeholder="Contenu" required></textarea> -->
           <textarea id="content" name="content"></textarea>
