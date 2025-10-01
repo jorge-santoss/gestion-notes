@@ -204,6 +204,7 @@ text-decoration: none;
 color: white;
 font-weight: bold;
 }
+
 .notes {
   display: flex;
   flex-direction: row;
